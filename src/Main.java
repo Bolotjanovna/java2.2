@@ -1,11 +1,19 @@
 public class Main {
     public static void main(String[] args) {
         int balance = 100;
-        int score = 300;
-        int summa = 1100;
-        int reward = 11;
+        int score = 1100;
+        int summa = 300;
 
-        System.out.println((balance + score) + "бонусы");
-        System.out.println((balance + summa + reward) + "бонусы");
+
+        int bonus;
+        if (score > 1000) {
+            bonus = score / 100;
+        } else {
+            bonus = 0;
+        }
+        score = balance + score + bonus;
+
+        System.out.println((balance + summa) + "бонусы");
+        System.out.println(score + "бонусы");
     }
 }
